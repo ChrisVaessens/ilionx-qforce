@@ -33,6 +33,9 @@ public class AnalyticServiceTest {
         MockitoAnnotations.openMocks(this);
     }
 
+    /**
+     * Test to check if a Analytic object is saved correctly
+     */
     @Test
     void testCreateAnalytic() {
         

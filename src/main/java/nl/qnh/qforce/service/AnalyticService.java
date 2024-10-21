@@ -11,6 +11,9 @@ import jakarta.servlet.http.HttpServletRequest;
 import nl.qnh.qforce.domain.Analytic;
 import nl.qnh.qforce.repositories.AnalyticRepository;
 
+/**
+ * Service for saving an retreiving analytics
+ */
 @Service
 public class AnalyticService {
     
@@ -19,9 +22,9 @@ public class AnalyticService {
     
     /**
      * Function to save a new analytics record
-     * @param request
-     * @param statusCode
-     * @return 
+     * @param request A HttpServletRequest object
+     * @param statusCode The HTTP StatusCode before it's send to the user
+     * @return An Analytic object
      */
     public Analytic createAnalytic(HttpServletRequest request, HttpStatusCode statusCode) {
 
@@ -43,7 +46,7 @@ public class AnalyticService {
 
     /**
      * Function to retreive all analytics
-     * @return
+     * @return A list all the Analytic objects saved to the database
      */
     public List<Analytic> getAnalytics() {
 
@@ -58,8 +61,8 @@ public class AnalyticService {
 
     /**
      * Function get the client IP
-     * @param request
-     * @return
+     * @param request A HttpServletRequest object
+     * @return A string of the IP address of the client
      */
     private String getClientIp(HttpServletRequest request) {
         String ipAddress = request.getHeader("X-Forwarded-For");
@@ -78,8 +81,8 @@ public class AnalyticService {
 
     /**
      * Function to get the url path with the query parameters
-     * @param request
-     * @return
+     * @param request A HttpServletRequest object
+     * @return A string with the url path
      */
     public String getUrlPath(HttpServletRequest request) {
         

@@ -25,6 +25,10 @@ public class GenderDeserializerTest {
         context = mock(DeserializationContext.class);
     }
 
+    /**
+     * Unit test to check if the gender "male" is detected correctly
+     * @throws IOException
+     */
     @Test
     void testDeserializeMale() throws IOException {
         when(jsonParser.getText()).thenReturn("male");
@@ -32,6 +36,10 @@ public class GenderDeserializerTest {
         assertEquals(Gender.MALE, result);
     }
 
+    /**
+     * Unit test to check if the gender "female" is detected correctly
+     * @throws IOException
+     */
     @Test
     void testDeserializeFemale() throws IOException {
         when(jsonParser.getText()).thenReturn("female");
@@ -39,6 +47,10 @@ public class GenderDeserializerTest {
         assertEquals(Gender.FEMALE, result);
     }
 
+    /**
+     * Unit test to check if the gender "n/a" is detected correctly
+     * @throws IOException
+     */
     @Test
     void testDeserializeNotApplicable() throws IOException {
         when(jsonParser.getText()).thenReturn("n/a");
@@ -46,6 +58,10 @@ public class GenderDeserializerTest {
         assertEquals(Gender.NOT_APPLICABLE, result);
     }
 
+    /**
+     * Unit test to check if the gender "unknown" is detected correctly
+     * @throws IOException
+     */
     @Test
     void testDeserializeUnknown() throws IOException {
         when(jsonParser.getText()).thenReturn("unknown");

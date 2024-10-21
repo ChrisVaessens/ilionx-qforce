@@ -13,9 +13,9 @@ public class GenderDeserializer extends JsonDeserializer<Gender> {
 
     /**
      * Function for deserializing a string to a value from the Gender object
-     * @param jsonParser
+     * @param jsonParser The input string
      * @param context
-     * @return
+     * @return The type from the Gender enum
      * @throws IOException
      * @throws JsonProcessingException
      */

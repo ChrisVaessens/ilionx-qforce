@@ -19,6 +19,10 @@ public class PersonControllerTest {
     @Autowired
     private MockMvc mockMvc;
 
+    /**
+     * Integration test check if the "get by id" endpoint is working
+     * @throws Exception
+     */
     @Test
     void testGetPersonById_Found() throws Exception {
 
@@ -28,6 +32,10 @@ public class PersonControllerTest {
                 .andExpect(jsonPath("$.name").value("Luke Skywalker"));
     }
 
+    /**
+     * Integration test check if a non existent person indeed results in a status 404 not found
+     * @throws Exception
+     */
     @Test
     void testGetPersonById_NotFound() throws Exception {
 
@@ -35,6 +43,9 @@ public class PersonControllerTest {
                 .andExpect(status().isNotFound());
     }
 
+    /**
+     * Integration test check if the search endpoint is working
+     */
     @Test
     void testSearchPersons_Found() {
         try {
@@ -47,6 +58,9 @@ public class PersonControllerTest {
         }
     }
 
+    /**
+     * Integration test check if the search endpoint returns an empty list of there are no matches found
+     */
     @Test
     void testSearchPersons_NotFound() {
         try {

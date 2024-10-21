@@ -7,6 +7,9 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+/**
+ * An implementation of the Movie class
+ */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class MovieImplementation implements Movie {
     

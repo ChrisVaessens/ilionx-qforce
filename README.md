@@ -1,13 +1,10 @@
-# QForce
+# Ilionx QForce
 
-The QForce REST API returns Star Wars characters.
-It uses the https://swapi.co/ to retrieve the actual Star Wars characters.
+This project is a fork from Ilionx's QForce project which can be found [here](https://github.com/Q24/qforce). The QForce REST API returns Star Wars characters. It uses the [Swapi API](https://swapi.co/) to retrieve the actual Star Wars characters.
 
 ## Endpoints
 
-This REST API has two endpoints to search for Star Wars characters by name or retrieve them by ID.
-
-The endpoints are as follows:
+This REST API has two endpoints to search for Star Wars characters by name or retrieve them by ID. The endpoints look as follows:
 
 Search: `/persons?q={query}`
 Get by ID: `/persons/{id}`
@@ -18,15 +15,7 @@ Once you run the application, you will find a detailed explanation of the endpoi
 
 You can also run the application in a Docker container. Simply run `docker compose up -d` in this repository. One container will launch. You can then access it on http://localhost:8080.
 
-## Requirements / Objectives
+## Refresh OpenAPI JSON
 
-- Fork this project.
-- Setup a decent build environment (Maven or Gradle).
-- Use Spring framework and Spring MVC in particular. Spring Boot recommended.
-- The project should use the `nl.qnh.qforce.domain` and `nl.qnh.qforce.service` interfaces. Implementations must be developed and these interfaces may not be changed.
-- The https://swapi.co/ must be used to retrieve the external people data.
-- Jackson object mapper (https://github.com/FasterXML/jackson) should be used for marshalling and unmarshalling JSON.
-- The QForce api should return the JSON data in snake case format.
-- Unit and integration tests should be written.
-- An embedded database (e.g. H2) should be used for storing the analytics.
-- Implementation decisions need to be documented in the Javadocs.
+1. Make sure the backend is running on `localhost` port `8080`.
+1. Make sure you are in the top level of the repository. Then execute the following command in the terminal to export the OpenAPI json: `curl http://localhost:8080/v3/api-docs > openapi.json`.

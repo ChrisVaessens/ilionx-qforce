@@ -14,6 +14,9 @@ import nl.qnh.qforce.domain.MovieImplementation;
 
 public class MovieDeserializerTest {
 
+    /**
+     * Unit test to check if a json is converted to a Movie object correctly
+     */
     @Test
     void testGet() {
         try {

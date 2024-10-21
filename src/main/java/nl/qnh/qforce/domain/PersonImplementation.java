@@ -11,6 +11,9 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 import nl.qnh.qforce.deserializers.GenderDeserializer;
 
+/**
+ * An implementation of the Person class
+ */
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class PersonImplementation implements Person {

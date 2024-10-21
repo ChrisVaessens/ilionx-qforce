@@ -35,9 +35,9 @@ public class PersonController {
     private PersonServiceImplementation personService;
     
     /**
-     * Endpoint for receiving a person
-     * @param id
-     * @return
+     * Endpoint for receiving a Star Wars character
+     * @param id The id of the character you would like to receive
+     * @return HTTP response: Either a Person object or status 404
      */
     @GetMapping("/{id}")
     @Operation(summary = "Get Star Wars character by ID")
@@ -59,9 +59,9 @@ public class PersonController {
     }
     
     /**
-     * Endpoint for searching a person
-     * @param q
-     * @return
+     * Endpoint for searching a Star Wars character
+     * @param q The search query
+     * @return HTTP response with a list of Person objects (the list can be empty)
      */
     @GetMapping
     @Operation(summary = "Search for Star Wars characters")

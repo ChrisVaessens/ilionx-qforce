@@ -13,8 +13,8 @@ public class WebService {
     
     /**
      * Function that fetches the response from one GET endpoint
-     * @param url
-     * @return
+     * @param url The url that needs to be fetched
+     * @return The HttpResponse
      * @throws InterruptedException
      * @throws ExecutionException
      */
@@ -34,8 +34,8 @@ public class WebService {
 
     /**
      * Function that fetches the responses from multipe GET endpoints
-     * @param urls
-     * @return
+     * @param urls The urls that need to be fetched
+     * @return A list of the HttpResponses
      * @throws InterruptedException
      * @throws ExecutionException
      */

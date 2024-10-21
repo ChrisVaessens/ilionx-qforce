@@ -6,6 +6,9 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+/**
+ * Schema for the Analytic records that will be saved to the database
+ */
 @Entity
 public class Analytic {
 

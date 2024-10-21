@@ -13,6 +13,9 @@ import org.junit.jupiter.api.Test;
 
 public class WebServiceTest {
 
+    /**
+     * Unit test to check if a list of URLs is fetched correctly
+     */
     @Test
     void testFetchMany() {
         try {
@@ -34,6 +37,9 @@ public class WebServiceTest {
         }   
     }
 
+    /**
+     * Unit test to check if a single URL is fetched correctly
+     */
     @Test
     void testFetchOne() {
         try {

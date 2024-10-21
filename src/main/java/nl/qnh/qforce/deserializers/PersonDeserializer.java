@@ -18,9 +18,9 @@ public class PersonDeserializer {
     
     /**
      * Function for deserializing a json string to a Person object
-     * @param id
-     * @param json
-     * @return
+     * @param id The id of the person
+     * @param json A JSON string in the format like to Swapi "/api/people" endpoint
+     * @return A Person object
      * @throws JsonProcessingException
      * @throws JsonMappingException
      * @throws InterruptedException

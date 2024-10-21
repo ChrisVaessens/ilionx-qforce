@@ -10,6 +10,10 @@ import nl.qnh.qforce.domain.Person;
 import nl.qnh.qforce.domain.PersonImplementation;
 
 public class PersonDeserializerTest {
+
+    /**
+     * Unit test to check if a json is converted to a Person object correctly
+     */
     @Test
     void testGet() {
         try {

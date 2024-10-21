@@ -12,8 +12,8 @@ public class MovieDeserializer {
     
     /**
      * Function for deserializing a json string to a Movie object
-     * @param json
-     * @return
+     * @param json A JSON string in the format like to Swapi "/api/films" endpoint
+     * @return A Movie object
      * @throws JsonProcessingException
      * @throws JsonMappingException
      */
